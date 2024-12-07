@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findemp - Global Talent Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">Findemp</div>
+        <ul class="nav-links">
+            <li><a href="#home" id="nav-home">Home</a></li>
+            <li><a href="#about" id="nav-about">About Us</a></li>
+            <li><a href="#features" id="nav-features">Features</a></li>
+            <li><a href="#testimonials" id="nav-testimonials">Testimonials</a></li>
+            <li><a href="#contact" id="nav-contact">Contact</a></li>
+            <li><button id="language-toggle" class="btn">Français</button></li>
+        </ul>
+    </div>
+</nav>
+    <section id="home" class="section hero">
+        <div class="container hero-content">
+            <h1 id="hero-title">We Find the Talent, <span class="highlight">You Focus on Success</span></h1>
+            <p id="hero-subtitle">Let Findemp connect you with the best international talent. We handle the hard work while you grow your business.</p>
+            <a href="#contact" id="hero-cta" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="features" class="section features">
+        <div class="container">
+            <h2 id="features-title">Our Services</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3 id="feature-1-title">Global Talent Search</h3>
+                    <p id="feature-1-desc">Findemp uses advanced algorithms to identify the best candidates for your business worldwide.</p>
+                </div>
+                <div class="card">
+                    <h3 id="feature-2-title">First-Round Interviews</h3>
+                    <p id="feature-2-desc">We conduct initial interviews to shortlist the most qualified applicants for your role.</p>
+                </div>
+                <div class="card">
+                    <h3 id="feature-3-title">Teleworking and Relocation</h3>
+                    <p id="feature-3-desc">Whether you need remote workers or expatriates, we customize our services to match your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 id="about-title">About Us</h2>
+            <p id="about-desc">Findemp specializes in connecting businesses with international talent. Using smart algorithms, we search for qualified employees and handle the initial interview process for you.</p>
+            
+            <h3 id="about-process-title">Our Process:</h3>
+            <ol id="about-process">
+                <li>Submit your job requirements.</li>
+                <li>We search globally for the perfect candidates.</li>
+                <li>Our experts conduct first-round interviews.</li>
+                <li>We present the top candidates for your final approval.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 id="testimonials-title">What Our Clients Say</h2>
+            <blockquote id="testimonial-1">
+                "Findemp helped us find the perfect remote developer in less than two weeks. Their service is exceptional!"
+                <footer id="testimonial-1-author">- TechCorp CEO</footer>
+            </blockquote>
+            <blockquote id="testimonial-2">
+                "We found an incredible employee willing to relocate thanks to Findemp. Highly recommended!"
+                <footer id="testimonial-2-author">- Global Solutions Manager</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="faq" class="section faq">
+        <div class="container">
+            <h2 id="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3 id="faq-1-title">What industries do you specialize in?</h3>
+                <p id="faq-1-desc">We serve a wide variety of industries, including tech, healthcare, finance, and more.</p>
+            </div>
+            <div class="faq-item">
+                <h3 id="faq-2-title">How long does it take to find a candidate?</h3>
+                <p id="faq-2-desc">We usually find and interview candidates within two to three weeks, depending on the role.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 id="contact-title">Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name" id="contact-name-label">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" id="contact-email-label">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="industry" id="contact-industry-label">Your Industry:</label>
+                    <select id="industry" name="industry">
+                        <option value="">Select Industry</option>
+                        <option value="tech">Tech</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="finance">Finance</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message" id="contact-message-label">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" id="contact-cta" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p id="footer-text">© 2024 Findemp. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="language.js"></script>
+</body>
+</html>

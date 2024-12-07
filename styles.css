@@ -1,0 +1,231 @@
+/* Reset and Base Styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette */
+    --primary-color: #004080;
+    --secondary-color: #ffd700;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --white: #ffffff;
+
+    /* Typography */
+    --font-main: 'Arial', sans-serif;
+    --font-size-base: 16px;
+    --font-size-small: 0.875rem;
+    --font-size-large: 1.25rem;
+
+    /* Spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 50px;
+
+    /* Transitions */
+    --transition-smooth: all 0.3s ease;
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-medium) 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: var(--spacing-medium) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: var(--white);
+    font-size: var(--font-size-large);
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar .nav-links li {
+    margin-left: var(--spacing-medium);
+}
+
+.navbar .nav-links a,
+.navbar .nav-links button {
+    color: var(--white);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links button:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://source.unsplash.com/1600x900/?business,teamwork');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-medium);
+}
+
+.hero .highlight {
+    color: var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--transition-smooth);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffcc00;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Feature Cards */
+.features {
+    background-color: var(--white);
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-medium);
+}
+
+.card {
+    background-color: var(--background-color);
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: var(--transition-smooth);
+    flex: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: var(--background-color);
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: #555;
+    position: relative;
+    padding: var(--spacing-medium);
+    margin: var(--spacing-medium) 0;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonials blockquote::before {
+    content: '\201C';
+    font-size: 4rem;
+    color: var(--secondary-color);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links li {
+        margin: var(--spacing-small) 0;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: var(--spacing-large);
+    color: var(--primary-color);
+}
